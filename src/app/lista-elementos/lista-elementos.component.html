@@ -1,0 +1,19 @@
+<div class="container">
+    <h2>Lista de Elementos</h2>
+    
+    <div class="formulario">
+      <input 
+        type="text" 
+        [(ngModel)]="nuevoElemento" 
+        placeholder="Ingresa un nuevo elemento"
+        (keyup.enter)="agregarElemento()"
+      >
+      <button (click)="agregarElemento()">Agregar</button>
+    </div>
+  
+    <ul class="lista">
+      <li *ngFor="let elemento of elementos">
+        {{ elemento }}
+      </li>
+    </ul>
+  </div>
